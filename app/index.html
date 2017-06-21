@@ -1,11 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="frontPorch">
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Bloc Base Project</title>
-    <link rel="stylesheet" href="/styles/main.css">
+    <title>Front Porch</title>
+    <link rel="stylesheet" type="text/css" href="/styles/main.css">
 </head>
 <body>
-    <script src="/scripts/app.js"></script>
+    <nav class="top-nav">
+      FrontPorch
+        <div class="add-room-button"> Add Chatroom
+        </div>
+    </nav>
+    <nav class="side-nav">
+        <div class="room-list">
+            Chatroom 1<br>
+            Chatroom 2<br>
+            Chatroom 3
+        </div>
+    </nav>
+    <main class="chat-room">
+        <div class="message-exchange">
+            Messages go here
+        </div>
+        <div class="enter-message"> Type messages here
+        <div>
+        <div class="submit-button">
+            Submit
+        <div>
+    </main>
+<body>
+  <ui-view></ui-view>
+  <!-- Angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+  <!-- AngularUI Router -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+
+  <!-- FireBase -->
+  <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+  <!-- AngularFire -->
+  <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDXiBL1vi1CBDnFF5Dv_Q1vk0W3Om_FDJs",
+      authDomain: "bloc-chat-67d24.firebaseapp.com",
+      databaseURL: "https://bloc-chat-67d24.firebaseio.com",
+      projectId: "bloc-chat-67d24",
+      storageBucket: "bloc-chat-67d24.appspot.com",
+      messagingSenderId: "47109480070"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/controllers/HomeCtrl.js"></script>
 </body>
 </html>
