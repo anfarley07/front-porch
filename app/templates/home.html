@@ -4,7 +4,8 @@
     </div>
 </nav>
 <nav class="side-nav">
-    <div class="room-list" ng-repeat="rooms in Room.all">
+    <div class="room-list" ng-repeat="room in room.roomsData">
+    <span>{{ $index+1 }}</span>
     </div>
 </nav>
 <main class="chat-room">
