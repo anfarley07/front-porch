@@ -1,10 +1,10 @@
 (function() {
-    function HomeCtrl() {
-
+    function HomeCtrl(Room) {
+        var roomsData = Room;
     }
 
     angular
       .module('frontPorch')
-      .controller('HomeCtrl', [HomeCtrl]);
+      .controller('HomeCtrl', ['Room', HomeCtrl]);
 
 })();
