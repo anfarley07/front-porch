@@ -4,9 +4,12 @@
     </div>
 </nav>
 <nav class="side-nav">
-    <div class="room-list" ng-repeat="room in home.roomsData">
-    <span>{{ $index+1 }}</span>
-    </div>
+    <table>
+      <tr class="room-list" ng-repeat="room in home.roomsData">
+        <span>{{ $index+1 }}</span>
+        <td class="room-name">{{ roomData.name }}</td>
+      </tr>
+    </table>
 </nav>
 <main class="chat-room">
     <form class="new-room">
