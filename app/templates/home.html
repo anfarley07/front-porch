@@ -7,7 +7,8 @@
     <table>
       <tr class="room-list" ng-repeat="room in home.roomsData">
         <span>{{ $index+1 }}</span>
-        <td class="room-name">{{ roomData.name }}</td>
+        <td class="room-number">{{ room.roomsData.$id }}</td>
+        <td class="room-name">{{ room.roomsData.$value }}</td>
       </tr>
     </table>
 </nav>
