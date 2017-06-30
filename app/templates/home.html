@@ -6,9 +6,7 @@
 <nav class="side-nav">
     <table>
       <tr class="room-list" ng-repeat="room in home.roomsData">
-        <span>{{ $index+1 }}</span>
-        <td class="room-number">{{ room.roomsData.$id }}</td>
-        <td class="room-name">{{ room.roomsData.$value }}</td>
+        <td class="room-name">{{ room.$value }}</td>
       </tr>
     </table>
 </nav>
