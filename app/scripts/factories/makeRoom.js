@@ -1,13 +1,8 @@
-makeRoom.factory(Room, $firebaseArray) {
-    var Room = {};
-    var ref = firebase.database().ref().child("rooms");
-    var rooms = $firebaseArray(ref);
-
-    this.Room.add(room){
-        Room.push(this.room);
+makeRoom.factory(Room, Room.add({
+        Room.push(room);
     }
 
-}
+});
 
 angular
   .module('frontPorch')
