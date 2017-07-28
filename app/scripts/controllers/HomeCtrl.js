@@ -6,13 +6,13 @@
             $scope.open = function(size, template) {
                 $uibModal.open({
                     animation: true,
-                    templateUrl: template || 'roomModalContent.html',
+                    templateUrl: `templates/roomModalContent.html',
                     controller: 'ModalCtrl',
                     backdrop: 'static'
                 });
             };
        };
-    
+
 
     angular
       .module('frontPorch', ['ui.bootstrap'])
