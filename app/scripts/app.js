@@ -16,7 +16,7 @@
     }
 
     angular
-        .module('frontPorch', ['ui.router','firebase'])
+        .module('frontPorch', ['ui.router','ui.bootstrap','firebase'])
         .config(config);
 
 })();

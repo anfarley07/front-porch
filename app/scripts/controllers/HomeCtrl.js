@@ -1,7 +1,7 @@
 (function() {
     function HomeCtrl(Room) {
         this.roomsData = Room.all;
-
+        Room.add;
     }
 
     angular
