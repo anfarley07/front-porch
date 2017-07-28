@@ -1,12 +1,20 @@
-angular.module('frontPorch').controller('ModalCtrl', function($scope, $uibModalInstance) {
-    $scope.searchterm='';
-    $scope.ok = function() {
-      alert('Your room name is ' + $scope.searchTerm);
-      Room.add;
-      $uibModalInstance.close($scope.searchTerm);;
-    };
+(function() {
+    function ModalCtrl(Room, $uibModal) {
 
-    $scope.cancel = function() {
-      $uibModalInstance.dismiss('cancel');
+        ModalCtrl.addRoom = function($scope, $uibModalInstance) {
+          $scope.roomName='';
+          $scope.ok = function() {
+            alert('Your room name is ' + $scope.roomName);
+            Room.add(room);
+            $uibModalInstance.close($scope.roomName);;
+          };
+
+          $scope.cancel = function() {
+            $uibModalInstance.dismiss('cancel');
+          };
+      };
     }
-})
+      angular
+          .module('frontPorch')
+          .controller('ModalCtrl', ['Room', '$uibModalInstance']);
+})();

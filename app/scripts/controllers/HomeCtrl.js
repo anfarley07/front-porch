@@ -1,19 +1,20 @@
 (function() {
-    function HomeCtrl(Room) {
+    function HomeCtrl(Room, ModalCtrl) {
         this.roomsData = Room.all;
-        Room.add;
-    }
+
+        HomeCtrl.openModal = function($scope, $uibModal){
+            $scope.open = function(size, template) {
+                $uibModal.open({
+                    animation: true,
+                    templateUrl: template || 'roomModalContent.html',
+                    controller: 'ModalCtrl',
+                    backdrop: 'static'
+                });
+            };
+       };
+    
 
     angular
       .module('frontPorch', ['ui.bootstrap'])
-      .controller('HomeCtrl', ['Room', HomeCtrl], function($scope, $uibModal){
-          $scope.open = function(size, template) {
-              $uibModal.open({
-                  animation: true,
-                  templateUrl: template || 'roomModalContent.html',
-                  controller: 'ModalCtrl',
-                  backdrop: 'static'
-              });
-          };
-
+      .controller('HomeCtrl', ['Room', 'Modal', HomeCtrl]);
 })();

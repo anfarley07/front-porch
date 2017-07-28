@@ -13,6 +13,13 @@
                 templateUrl: '/templates/home.html'
             });
 
+        $stateProvider
+            .state('modal', {
+                url: '/addRoom',
+                controller: 'ModalCtrl as modal',
+                templateUrl: '/templates/roomModalContent.html'
+            });
+
     }
 
     angular

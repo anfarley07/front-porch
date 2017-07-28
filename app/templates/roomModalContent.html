@@ -1,13 +1,11 @@
-<div ng-app="myApp">
-<div ng-controller="HomeCtrl">
-  <script type="text/ng-template" id="myModalContent.html">
+  <script type="text/ng-template" id="roomModalContent.html">
     <div class="modal-header">
       <h3 class="modal-title">Create new chatroom</h3>
     </div>
     <div class="modal-body">
       <form ng-submit="ok()">
         <div class="input-group animated fadeIn">
-          <input type="text" class="form-control finderBar" ng-model="searchTerm" placeholder="Please enter a name..." autofocus>
+          <input type="text" class="form-control textbox" ng-model="roomName" placeholder="Please enter a name..." autofocus>
           <span class="input-group-btn">
           <button class="btn btn-default btn-success" type="button" ng-click="ok()">Submit</button>
           </span>
@@ -20,10 +18,7 @@
   </div>
 </script>
 
-
-<button type="button" class="btn btn-default" ng-click="open()">Open me!</button>
-
-<div ng-show="searchTerm">searchTerm from a modal: {{ searchTerm }}</div>
+<div ng-show="roomName">roomName from a modal: {{ roomName }}</div>
 </div>
 
 </div>
