@@ -1,4 +1,3 @@
-  <script type="text/ng-template" id="roomModalContent.html">
     <div class="modal-header">
       <h3 class="modal-title">Create new chatroom</h3>
     </div>
@@ -7,7 +6,7 @@
         <div class="input-group animated fadeIn">
           <input type="text" class="form-control textbox" ng-model="roomName" placeholder="Please enter a name..." autofocus>
           <span class="input-group-btn">
-          <button class="btn btn-default btn-success" type="button" ng-click="ModalCtrl.addRoom($scope, $uibModalInstance)">Submit</button>
+          <button class="btn btn-default btn-success" type="button" ng-click="modal.addRoom(roomName)">Submit</button>
           </span>
         </div>
     </form>
