@@ -3,7 +3,7 @@
         this.rooms = Room;
         this.addRoom = function(roomName) {
           this.roomName='';
-            Room.add(room);
+            Room.add(roomName);
           };
 
           this.cancel = function() {
