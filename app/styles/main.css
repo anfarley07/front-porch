@@ -65,3 +65,23 @@ body {
   color: #white;
   text-shadow: #0ED2D0;
 }
+
+.message-exchange {
+  position: inherit;
+  padding-left: 25px;
+  background-color: white;
+  height: 600px;
+  border-radius: 6px;
+}
+
+.modal {
+  position: absolute;
+  left: 400px;
+  top: 200px;
+  width: 220px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  border-radius: 6px;
+  background-color: #BAE9E9;
+
+}
