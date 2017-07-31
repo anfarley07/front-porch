@@ -6,13 +6,11 @@
             $uibModal.open({
                     animation: true,
                     templateUrl: 'templates/roomModalContent.html',
-                    controller: 'ModalCtrl',
+                    controller: 'ModalCtrl as modal',
                     backdrop: 'static'
                     });
         };
-
-        /* this code doesn't work but I think there's something like 'result.then'
-        that needs to be used to dismiss the modal once submit has been clicked
+        /* this breaks shit but is in the right direction
         this.openModal.result.then = function(Room) {
             $uibModalInstance.close({});
         } */

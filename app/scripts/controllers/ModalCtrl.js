@@ -3,12 +3,16 @@
         this.rooms = Room;
         this.addRoom = function(roomName) {
           this.roomName='';
-            Room.add(roomName);
+            Room.add(roomName).then(function($uibModalInstance) {
+                $uibModalInstance.close();
+            })
           };
 
-          this.cancel = function() {
+          this.submitModule = function() {
             $uibModalInstance.dismiss('cancel');
           };
+
+
       }
 
 
