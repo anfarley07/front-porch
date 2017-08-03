@@ -1,12 +1,9 @@
 (function() {
-    function HomeCtrl(Room, $uibModal, Message) {
+    function HomeCtrl(Room, $uibModal, $firebaseArray, Message) {
         this.roomsData = Room.all;
 
         //attempt to store active room
-        $scope.activeRoom = function(roomName) {
-            rooms.$indexFor(id);
-
-        }
+        $scope.activeRoom = rooms.indexFor(id);
 
         this.openModal = function(Room) {
             $uibModal.open({
@@ -22,5 +19,5 @@
 
     angular
       .module('frontPorch')
-      .controller('HomeCtrl', ['Room', '$uibModal', 'Message', HomeCtrl]);
+      .controller('HomeCtrl', ['Room', '$uibModal', '$firebaseArray', 'Message', HomeCtrl]);
 })();
