@@ -6,14 +6,15 @@
 <nav class="side-nav">
     <table>
       <tr class="room-list" ng-repeat="room in home.roomsData">
-        <td class="room-name">{{ room.$value }}</td>
+        <td class="room-name" ng-click="home.activeRoom">{{ room.$value}} {{ messages.getByRoomID }}</td>
       </tr>
     </table>
 </nav>
 <main class="chat-room">
     <div>
     <div class="message-exchange">
-        Messages go here
+        <div class="messages" ng-repeat="messages in home.activeRoom">
+        </div>
     </div>
     <div class="enter-message"> Type messages here
     <div>

@@ -74,6 +74,18 @@ body {
   border-radius: 6px;
 }
 
+.message-header {
+  position: inherit;
+  padding-left: 25px;
+}
+
+.messages {
+  position: inherit;
+  padding left: 27px;
+  background-color: grey;
+  border-radius: 6px;
+}
+
 .modal {
   position: absolute;
   left: 400px;

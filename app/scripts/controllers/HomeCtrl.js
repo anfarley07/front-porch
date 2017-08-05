@@ -3,7 +3,8 @@
         this.roomsData = Room.all;
 
         //attempt to store active room
-        $scope.activeRoom = rooms.indexFor(id);
+
+        /*this.activeRoom = Room; */
 
         this.openModal = function(Room) {
             $uibModal.open({
