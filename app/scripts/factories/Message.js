@@ -5,9 +5,12 @@
 
       var messages = $firebaseArray(ref);
 
-      Message.getByRoomID = function(roomId) {
-        ref.orderByChild("messages").equalTo("-KqL9rhi_HXiIPRc5XxK");
-      };
+      Message.getByRoomId = function(room) {
+        return $firebaseArray(ref.orderByChild("messages").equalTo(roomId));
+        /*for (var i = 0; i <=  messages.length; i++) {
+          return messages.content && messages.username;
+        }*/
+      }
 
       return Message;
 

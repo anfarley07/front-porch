@@ -1,10 +1,20 @@
 (function() {
-    function HomeCtrl(Room, $uibModal, $firebaseArray, Message) {
+    function HomeCtrl($scope, Room, $uibModal, $firebaseArray, Message) {
         this.roomsData = Room.all;
 
+        $scope.activeRoom = null;
         //attempt to store active room
+        $scope.setActiveRoom = function() {
+            $scope.activeRoom = this.room;
+            $scope.getByRoomId($scope.activeRoom.$id);
+        }
 
-        /*this.activeRoom = Room; */
+        $scope.getByRoomId = function(room) {
+            $scope.messages = Message.getByRoomId(room);
+        }
+
+
+        console.log($scope.activeRoom);
 
         this.openModal = function(Room) {
             $uibModal.open({
@@ -20,5 +30,5 @@
 
     angular
       .module('frontPorch')
-      .controller('HomeCtrl', ['Room', '$uibModal', '$firebaseArray', 'Message', HomeCtrl]);
+      .controller('HomeCtrl', ['$scope','Room', '$uibModal', '$firebaseArray', 'Message', HomeCtrl]);
 })();

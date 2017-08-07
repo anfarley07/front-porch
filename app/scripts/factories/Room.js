@@ -4,6 +4,7 @@
         var ref = firebase.database().ref().child("rooms");
         var rooms = $firebaseArray(ref);
 
+
         Room.all = rooms;
 
         Room.add = function(room) {
@@ -13,6 +14,7 @@
                 rooms.$indexFor(id); //returns location in the array
             });
         }
+
 
         return Room;
 
