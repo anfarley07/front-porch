@@ -5,17 +5,17 @@
 </nav>
 <nav class="side-nav">
     <table>
-      <tr class="room-list" ng-click="setActiveRoom(room)" ng-repeat="room in home.roomsData">
-        <td class="room-name" ng-click="home.activeRoom(room)">{{ room.$value}} </td>
+      <tr class="room-list" ng-repeat="room in home.roomsData">
+        <td class="room-name" ng-click="setActiveRoom(room)">{{ room.$value}} </td>
       </tr>
     </table>
 </nav>
 <main class="chat-room">
     <div>
     <div class="message-exchange">
-        <div class= "message-header"> {{home.activeRoom}}
+        <div class= "message-header"> <h2> {{activeRoom.$value}} </h2>
         </div>
-        <div class="messages" ng-repeat="messages in message.getByRoomID"> {{messages.content}}
+        <div class="messages" ng-repeat="message in messages"> <h4> {{message.username}} </h4> {{message.content}}
         </div>
     </div>
     <div class="enter-message"> Type messages here

@@ -68,7 +68,7 @@ body {
 
 .message-exchange {
   position: inherit;
-  padding-left: 25px;
+  padding-left: 28px;
   background-color: white;
   height: 600px;
   border-radius: 6px;
@@ -76,14 +76,23 @@ body {
 
 .message-header {
   position: inherit;
-  padding-left: 25px;
+  padding-left: 32px;
+  padding-top: 3px;
+  background-color: white;
+  color: black;
 }
 
 .messages {
   position: inherit;
-  padding left: 27px;
-  background-color: grey;
+  padding left: 40px;
+  background-color: #effdff;
   border-radius: 6px;
+}
+
+.enter-message {
+  position: inherit;
+  padding-top: 2px;
+  padding-left: 27px;
 }
 
 .modal {

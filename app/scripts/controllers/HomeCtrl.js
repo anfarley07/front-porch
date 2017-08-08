@@ -4,7 +4,7 @@
 
         $scope.activeRoom = null;
         //attempt to store active room
-        $scope.setActiveRoom = function() {
+        $scope.setActiveRoom = function(room) {
             $scope.activeRoom = this.room;
             $scope.getByRoomId($scope.activeRoom.$id);
         }
