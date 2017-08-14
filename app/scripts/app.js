@@ -20,6 +20,14 @@
                 templateUrl: '/templates/roomModalContent.html'
             });
 
+        $stateProvider
+          .state('cookies', {
+            url: '/cookies',
+            controller: 'CookieCtrl as cookies',
+            templateUrl: '/templates/cookieModal.html'
+          })
+      }
+
         function FrontPorchCookies($cookies, $uibModal) {
             var currentUser = $cookies.get('frontPorchCurrentUser');
             if (!currentUser || currentUser === '') {
@@ -30,7 +38,6 @@
                   backdrop: 'static'
                 });
             }
-        };
 
     }
 

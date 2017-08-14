@@ -106,3 +106,12 @@ body {
   background-color: #BAE9E9;
 
 }
+
+.username-modal {
+  height: 150px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  background-color: #BAE9E9;
+}

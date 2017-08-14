@@ -1,24 +1,23 @@
 (function() {
-  function CookieCtrl($scope, $cookies, $uibModal) {
-    $scope.user = {};
+  function CookieCtrl($scope, $cookies, $uibModalInstance) {
+    $scope.username = '';
 
     $scope.submitForm = function(isValid) {
       $scope.submitted = true;
+      isValid = true;
         if (isValid) {
-          $uibModal.close('closed');
-          $cookies.username = $scope.user.username;
+          $cookies.put("frontPorchCurrentUser", $scope.username) = $scope.username;
 
           } else {
               console.log('wrong')
           }
-        }
-      }
-
-    }
+          $uibModalInstance.close('closed');
+        };
+      };
 
 
   angular
     .module('frontPorch')
-    .controller('CookieCtrl', ['$scope', '$cookies', '$uibModal', CookieCtrl])
+    .controller('CookieCtrl', ['$scope', '$cookies', '$uibModalInstance', CookieCtrl])
 
 })();

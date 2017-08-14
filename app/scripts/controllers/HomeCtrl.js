@@ -1,5 +1,5 @@
 (function() {
-    function HomeCtrl($scope, Room, $uibModal, $firebaseArray, Message) {
+    function HomeCtrl($scope, Room, $uibModal, $firebaseArray, Message, CookieCtrl) {
         this.roomsData = Room.all;
 
         $scope.activeRoom = null;
