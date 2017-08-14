@@ -20,10 +20,23 @@
                 templateUrl: '/templates/roomModalContent.html'
             });
 
+        function FrontPorchCookies($cookies, $uibModal) {
+            var currentUser = $cookies.get('frontPorchCurrentUser');
+            if (!currentUser || currentUser === '') {
+                $uibModal.open({
+                  animation: true,
+                  controller: 'CookieCtrl as cookies',
+                  templateUrl: '/templates/cookieModal.html',
+                  backdrop: 'static'
+                });
+            }
+        };
+
     }
 
     angular
-        .module('frontPorch', ['ui.router','ui.bootstrap','firebase'])
-        .config(config);
+        .module('frontPorch', ['ui.router','ui.bootstrap','firebase','ngCookies'])
+        .config(config)
+        .run(['$cookies','$uibModal', FrontPorchCookies]);
 
 })();
