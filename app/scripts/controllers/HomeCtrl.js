@@ -1,5 +1,5 @@
 (function() {
-    function HomeCtrl($scope, Room, $uibModal, $firebaseArray, Message, CookieCtrl) {
+    function HomeCtrl($scope, $cookies, Firebase, Room, $uibModal, $firebaseArray, Message, CookieCtrl) {
         this.roomsData = Room.all;
 
         $scope.activeRoom = null;
@@ -26,9 +26,18 @@
 
         };
 
+        $scope.sendMessage = function() {
+          var  username = $cookies.username,
+               timeStamp = new Firebase.database.ServerValue.TIMESTAMP,
+               chatRoom = roomId.$id,
+               messages = $firebaseArray(ref.orderByChild('roomId').equalTo(room));
+            $scope.send = Message.send(this.msg, $scope.activeRoom);
+            $scope.msg = "";
+        };
+
     };
 
     angular
       .module('frontPorch')
-      .controller('HomeCtrl', ['$scope','Room', '$uibModal', '$firebaseArray', 'Message', HomeCtrl]);
+      .controller('HomeCtrl', ['$scope', '$cookies', 'Firebase', 'Room', '$uibModal', '$firebaseArray', 'Message', HomeCtrl]);
 })();

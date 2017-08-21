@@ -90,9 +90,24 @@ body {
 }
 
 .enter-message {
-  position: inherit;
+  position: absolute;
+  top: 647px;
+  left: 188px;
+  width: 1163px;
   padding-top: 2px;
   padding-left: 27px;
+  background-color: pink;
+  color: black;
+}
+
+.enter-message .btn-primary {
+  top: 5px;
+  width: 10em;
+  margin-left: 70em;
+  line-height: 28px;
+  background-color: #0ED2D0;
+  font-family: sans-serif;
+  color: #EFFDFD;
 }
 
 .modal {
