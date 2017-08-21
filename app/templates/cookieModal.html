@@ -1,17 +1,24 @@
 
-<form name="frm-username" class="username-modal">
+<form name="frm-username" class="username-modal" ng-submit="submitForm(username.$valid)">
   <div>
 		  <div>
 			     <h1>Set a username</h1>
 		  </div>
-		  <input type="text" class="form-control textbox" ng-model="username">
+      <div class="frm-username" ng-class="{ 'has-error' : username.$invalid && username.$pristine && submitted }">
+			<div class="error-block">
+
+				<div ng-show="username.$error.minlength && submitted" class="help-block">Username is too short.</div>
+				<div ng-show="username.$error.maxlength && submitted" class="help-block">Username is too long.</div>
+			</div>
+			<input required type="text" class="form-control" ng-model="username" ng-minlength="3" ng-maxlength="16">
+		</div>
       <br>
       <label>This name will appear when you send messages</label>
 
 	</div>
 
 		<div>
-			<button type="submit" class="btn btn-primary" ng-click="submitForm(username)">Set username</button>
+			<button type="submit" class="btn btn-primary">Set username</button>
 		</div>
 	</div>
 </form>

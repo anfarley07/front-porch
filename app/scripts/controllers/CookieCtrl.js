@@ -6,7 +6,7 @@
       $scope.submitted = true;
       isValid = true;
         if (isValid) {
-          $cookies.put("frontPorchCurrentUser", $scope.username) = $scope.username;
+          $cookies.put("frontPorchCurrentUser", $scope.username);
 
           } else {
               console.log('wrong')
