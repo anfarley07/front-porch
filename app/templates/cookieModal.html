@@ -4,16 +4,10 @@
 		  <div>
 			     <h1>Set a username</h1>
 		  </div>
-      <div class="frm-username" ng-class="{ 'has-error' : username.$invalid && username.$pristine && submitted }">
-			<div class="error-block">
-
-				<div ng-show="username.$error.minlength && submitted" class="help-block">Username is too short.</div>
-				<div ng-show="username.$error.maxlength && submitted" class="help-block">Username is too long.</div>
-			</div>
-			<input required type="text" class="form-control" ng-model="username" ng-minlength="3" ng-maxlength="16">
+			<input required type="text" ng-model="username" class="form-control" pattern=".{3,15}">
 		</div>
       <br>
-      <label>This name will appear when you send messages</label>
+      <label>3-15 characters. This name will appear when you send messages</label>
 
 	</div>
 
