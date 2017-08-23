@@ -27,11 +27,13 @@
         };
 
         $scope.sendMessage = function() {
+          /*var ref = firebase.database().ref().child("messages");
           var  username = $cookies.username,
-               timeStamp = new Firebase.database.ServerValue.TIMESTAMP,
+               timeStamp = Firebase.database.ServerValue.TIMESTAMP,
                chatRoom = roomId.$id,
-               messages = $firebaseArray(ref.orderByChild('roomId').equalTo(room));
-            $scope.send = Message.send(this.msg, $scope.activeRoom);
+               messages = $firebaseArray(ref.orderByChild('roomId').equalTo('room')); */
+
+          $scope.send = Message.send(this.msg, $scope.activeRoom);
             $scope.msg = "";
         };
 
