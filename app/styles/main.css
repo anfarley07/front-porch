@@ -49,12 +49,12 @@ body {
 
 .side-nav {
     position: relative;
-    height: 600px;
+    height: 500px;
     border-radius: 6px;
     width: 180px;
     float: left;
     text-align: center;
-    background-color: #E6A36B;
+    background-color: #8e9696;
 }
 
 .side-nav .room-list {
@@ -70,13 +70,15 @@ body {
   position: inherit;
   padding-left: 28px;
   background-color: white;
-  height: 600px;
+  height: 500px;
   border-radius: 6px;
 }
 
 .message-header {
   position: inherit;
   padding-left: 32px;
+  margin-left: 8em;
+  margin-right: 10em;
   padding-top: 3px;
   background-color: white;
   color: black;
@@ -84,29 +86,38 @@ body {
 
 .messages {
   position: inherit;
-  padding left: 40px;
+  padding: 4px;
+  margin-top: 5px;
+  margin-left: 10em;
+  margin-right: 1em;
   background-color: #effdff;
   border-radius: 6px;
 }
 
 .enter-message {
-  position: absolute;
-  top: 647px;
-  left: 188px;
-  width: 1163px;
-  padding-top: 2px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   padding-left: 27px;
-  background-color: pink;
-  color: black;
+  background-color: #e6f1f2;
+  border-radius: 6px;
+  color: gray;
+}
+
+.enter-message .message-input {
+  width: 87em;
 }
 
 .enter-message .btn-primary {
-  top: 5px;
+  position: absolute;
+  top: 584px;
   width: 10em;
-  margin-left: 70em;
-  line-height: 28px;
+  margin-bottom: 2em;
+  margin-right: 3em;
+  right: 27px;
+  line-height: 18px;
   background-color: #0ED2D0;
   font-family: sans-serif;
+  border-radius: 6px;
   color: #EFFDFD;
 }
 

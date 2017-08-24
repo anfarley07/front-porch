@@ -13,7 +13,10 @@
           }
           $uibModalInstance.close('closed');
         };
+    
       };
+
+
 
 
   angular

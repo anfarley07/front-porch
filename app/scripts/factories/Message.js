@@ -11,17 +11,18 @@
       };
 
       Message.send = function(newMessage, roomId) {
-        var  username = $cookies.username,
+        var  username = $cookies.get("frontPorchCurrentUser"),
              timeStamp = Firebase.database.ServerValue.TIMESTAMP,
              chatRoom = roomId.$id,
-             messages = $firebaseArray(ref.orderByChild('roomId').equalTo('room')); 
-
+             messages = $firebaseArray(ref.orderByChild('roomId').equalTo('room'));
+             console.log(username);
              messages.$add({
                  username: username,
                  content: newMessage,
                  sentAt: timeStamp,
                  roomId: chatRoom
              })
+
       };
 
       return Message;
